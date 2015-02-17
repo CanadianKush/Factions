@@ -62,7 +62,7 @@ public class CmdShow extends FCommand {
         msg(TL.COMMAND_SHOW_POWER, faction.getLandRounded(), faction.getPowerRounded(), faction.getPowerMaxRounded(), boost, raidable);
 
         if (P.p.getConfig().getBoolean("hcf.raidable", false)) {
-            int dtr = Math.max(faction.getPowerRounded() - faction.getLandRounded(), 0);
+            int dtr = Math.max(faction.getPowerRounded(), 0);
             msg(TL.COMMAND_SHOW_DEATHS_TIL_RAIDABLE, dtr);
         }
         if (faction.isPermanent()) {
